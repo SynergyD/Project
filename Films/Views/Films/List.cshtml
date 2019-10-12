@@ -1,0 +1,12 @@
+﻿@model FilmsListViewModel
+@using Films.Data.Models
+<h1>Все фильмы</h1>
+<h3>@Model.CurrGenre</h3>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Film film in Model.AllFilms)
+        {
+            @Html.Partial("AllFilms", film)
+        }
+    }
+</div>

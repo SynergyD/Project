@@ -1,0 +1,11 @@
+﻿@model HomeViewModel
+
+<h1>Лучшие фильмы</h1>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Film film in Model.FavFilms)
+        {
+            @Html.Partial("AllFilms", film)
+        }
+    }
+</div>

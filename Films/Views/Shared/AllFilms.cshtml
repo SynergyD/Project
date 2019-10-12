@@ -1,0 +1,10 @@
+﻿@model Films.Data.Models.Film
+
+    <div class="col-lg-4">
+        <img class="img-thumbnail" src="@Model.Img" alt="@Model.Name" />
+        <h2>@Model.Name</h2>
+        <p>@{@Model.EnglishName} (original title)</p>
+        <p>Жанр: @Model.Genre.GenreName</p>
+        <p>Цена: @Model.Price.ToString("c", CultureInfo.CreateSpecificCulture("en-US"))</p>
+        <p><a class="btn btn-warning" asp-controller="ShopCart" asp-action="aaddToCart" asp-route-id="@Model.id">Добавить в корзину</a></p>
+    </div>
