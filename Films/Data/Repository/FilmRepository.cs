@@ -11,7 +11,7 @@ namespace Films.Data.Repository
     public class FilmRepository : IAllFilms
     {
         private readonly AppDBContent appDBContent;
-        public FilmRepository(AppDBContent appDBContent)
+        public FilmRepository(AppDBContent appDBContent )
         {
             this.appDBContent = appDBContent;
         }
